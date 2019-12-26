@@ -1,12 +1,12 @@
-package com.demo.spring.boot.example.controller;
+package demo.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
+@RestController
 public class IndexController {
 	
-    @RequestMapping("/")
+    @RequestMapping(value = "/", produces = "text/plain")
     String index(){
         return "Merry Christmas!!";
     }
